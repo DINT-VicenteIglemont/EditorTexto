@@ -1,0 +1,33 @@
+﻿<Window x:Class="EditorTexto.Configuracion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EditorTexto"
+        mc:Ignorable="d"
+        Title="Configuracion" Height="450" Width="800" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Icon="Settings.ico">
+    <StackPanel Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Alto" Grid.Row="0" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Ancho" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <TextBox x:Name="AltoTextBox" Text="450" Grid.Row="0" Grid.Column="1" Margin="5" Width="100"/>
+            <TextBox x:Name="AnchoTextBox" Text="800" Grid.Row="1" Grid.Column="1" Margin="5" Width="100"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="GuardarConfigButton"  Content="Aceptar" Margin="5" Click="GuardarConfigButton_Click"/>
+            <Button x:Name="CancelarConfigButton" Content="Cancelar" Margin="5" Click="CancelarConfigButton_Click"/>
+        </StackPanel>
+        
+    </StackPanel>
+    
+</Window>
